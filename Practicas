@@ -1,1 +1,119 @@
+package snake;
+
+import java.util.Scanner;
+
+public class Serpent {
+   public static Scanner sc = new Scanner (System.in); 
+    public static String [][] matriz;
+    public static int num = 0;
+    public static String reglon, columna;
+    
+    
+    public static void iniciar(){
+    
+    }
+    public static void inicio(){
+        
+        int x;
+        int y;
+        int fila= 35;
+        int columna=70;
+        String matriz [][] = new String [fila][columna];        
+        //iniciando la matriz
+        for( x=0; x< matriz.length; x++){
+            for( y=0; y<matriz[x].length; y++){
+                
+                
+                if(x == 34 || x==0) 
+                    matriz[x][y]= "#";
+                else if(y==69 || y==0)
+                    matriz[x][y]= "#";
+                                    
+            }
+           
+        }
+        
+        for( x=0; x< fila; x++){
+            for( y=0; y<columna; y++){
+            }
+            System.out.print(matriz[x][y]);
+            
+            if(y==69)
+                System.out.print("\n");
+            
+            
+            
+        }
+        //menu del juego
+        System.out.println("______________________________________________________________________");
+                
+        System.out.println("puntos: ");
+        System.out.println("Movimientos: ");
+        System.out.println("Nombre: ");
+        
+    }
+    
+    public static void regresar(){
+        
+    }
+    
+    public static void historial(){
+        
+    }
+    public static void salir(){
+        System.out.println("juego finalilzado");
+        System.exit(0);
+    }
+        
+   
+public static void main(String[] args) { 
+    String op="0";
+    String jugador;
+    int fecha;
+     while(op != "4"){
+    
+    System.out.println("1. Iniciar juego");
+    System.out.println("2. Regresar al juego");
+    System.out.println("3. Historial");
+    System.out.println("4. Salir");
+    System.out.println("Seleccione una opcion: ");
+ 
+    op=sc.next();
+    switch(op){
+           
+        case "1":
+            
+        System.out.println("\nIngrese el nombre del jugador");
+        jugador=sc.next();
+        
+        System.out.print("\nIngrese su fecha de nacimiento");
+        fecha = sc.nextInt();
+        
+        
+            //iniciar ();
+            inicio ();
+        break;
+        
+        case "2":
+            regresar ();
+	break;
+        
+        case "3":
+            historial();
+	break;
+	
+        case "4":
+            salir ();
+	break;
+
+	default:
+            System.out.println("opcion incorrecta");
+        break;
+                }
+   
+   
+        }
+           
+    }
+}
 
